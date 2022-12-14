@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>@attach(title)</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+        <!-- styles-->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/bsnav.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="assets/css/icomoon.css">
+        <link rel="stylesheet" href="assets/css/animate.css">
+        <link rel="stylesheet" href="assets/css/owl.carousel.css">
+        <link rel="stylesheet" href="assets/css/owl.theme.css">
+        <link rel="stylesheet" href="assets/css/aos.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <!--/ styles -->
+    </head>
+
+    <body>
+        @import(header_index)
+
+        @attach(content)
+
+        @import(footer_index)
+        <!-- scripts -->
+        <script src="assets/js/jquery.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/bsnav.min.js"></script>
+        <script src="assets/js/owl.carousel.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#owl-demo").owlCarousel({
+                    navigation: true, // Show next and prev buttons
+                    slideSpeed: 300,
+                    paginationSpeed: 400,
+                    singleItem: true,
+                    // "singleItem:true" is a shortcut for:
+                    // items : 1, 
+                    // itemsDesktop : false,
+                    // itemsDesktopSmall : false,
+                    // itemsTablet: false,
+                    // itemsMobile : false
+
+                    //Autoplay
+                    autoPlay: true,
+                    goToFirst: false,
+                    goToFirstSpeed: 1000,
+
+                    // Navigation
+                    navigation: false,
+                    navigationText: ["prev", "next"],
+                    pagination: true,
+                    paginationNumbers: false,
+
+                    // Responsive
+                    responsive: true,
+                    items: 5,
+                    itemsDesktop: [1199, 4],
+                    itemsDesktopSmall: [980, 3],
+                    itemsTablet: [768, 2],
+                    itemsMobile: [479, 1]
+                });
+            });
+        </script>
+        <script src="assets/js/wow.js"></script>
+        <script src="assets/js/aos.js"></script>
+        <script type="text/javascript">
+            AOS.init({
+                offset: 60,
+                duration: 600,
+                easing: 'ease-in-sine',
+                delay: 100,
+            });
+        </script>
+        <script src="assets/js/custom.js"></script>
+        <!--/ scripts -->
+        <script>
+            $(window).scroll(function () {
+                var scroll = $(window).scrollTop();
+                if (scroll >= 100) {
+                    $('header').addClass('fixed-top');
+                } else {
+                    $('header').removeClass('fixed-top');
+                }
+            });
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#contactForm").validate({
+                    rules: {
+                        name: {
+                            required: true
+                        },
+                        phone: {
+                            required: true,
+                            number: true,
+                            minlength: 10,
+                            maxlength: 12
+                        },
+                        mail: {
+                            required: true,
+                            email: true
+                        },
+                        sub: {
+                            required: true
+                        },
+                    },
+                    messages: {
+                        name: {
+                            required: "Please Enter Your Name"
+                        },
+                        phone: {
+                            required: "Please Enter Phone Number"
+                        },
+                        mail: {
+                            required: "Please Enter Valid Email "
+                        },
+                        sub: {
+                            required: "Please Enter Subject "
+                        },
+                    },
+                });
+            });
+        </script>
+    </body>
+
+</html>
