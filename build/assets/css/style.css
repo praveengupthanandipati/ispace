@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700");
 
-header .dropdown .navbar-nav {
+/* header .dropdown .navbar-nav {
   min-width: 280px;
   background: #011f4b !important;
   border-top: 3px solid #00AEEF;
@@ -8,7 +8,7 @@ header .dropdown .navbar-nav {
 
 header {
   background: #fff;
-}
+} */
 
 header .navbar-nav .nav-link {
   text-transform: uppercase;
