@@ -2,17 +2,20 @@
   "name": "ispacewebsite",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "tailwind.config.js",
   "scripts": {
     "start": "minissg",
     "dev": "minissg --watch",
-    "scss": "node-sass --watch scss -o css"
+    "scss": "node-sass --watch scss -o css",
+    "tailwind": "npx tailwindcss -i ./src/input.css -o ./build/css/style.css --watch",
+    "prettier": "npx prettier --write '**/*.html"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "mini-ssg": "^0.2.2",
-    "node-sass": "^7.0.3"
+    "node-sass": "^7.0.3",
+    "prettier-plugin-tailwindcss": "^0.2.1"
   }
 }
